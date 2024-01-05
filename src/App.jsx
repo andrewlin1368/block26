@@ -7,8 +7,6 @@ import SingleContact from "./components/SingleContact";
 function App() {
   const [showDetails, setShowDetails] = useState(null);
   const [id, setId] = useState(0);
-  const [data, setData] = useState(null);
-  console.log(id);
   return (
     (!id && (
       <>

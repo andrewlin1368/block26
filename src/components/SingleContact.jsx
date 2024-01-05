@@ -18,7 +18,6 @@ export default function SingleContact({ id, setId }) {
     };
     singleData();
   }, []);
-  console.log(data, "outside");
   return (
     data && (
       <>
