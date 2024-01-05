@@ -18,7 +18,13 @@ function App() {
           <ContactDetails showDetails={showDetails}></ContactDetails>
         )}
       </>
-    )) || <SingleContact id={id} setId={setId}></SingleContact>
+    )) || (
+      <SingleContact
+        id={id}
+        setId={setId}
+        setShowDetails={setShowDetails}
+      ></SingleContact>
+    )
   );
 }
 

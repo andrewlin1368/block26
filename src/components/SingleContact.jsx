@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function SingleContact({ id, setId }) {
+export default function SingleContact({ id, setId, setShowDetails }) {
   const [data, setData] = useState(null);
   useEffect(() => {
     const singleData = async () => {
@@ -11,7 +11,6 @@ export default function SingleContact({ id, setId }) {
           `https://jsonplaceholder.typicode.com/users/${id}`
         );
         setData(response.data);
-        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -38,6 +37,7 @@ export default function SingleContact({ id, setId }) {
           <button
             onClick={() => {
               setId(0);
+              setShowDetails(null);
             }}
           >
             Return Home
